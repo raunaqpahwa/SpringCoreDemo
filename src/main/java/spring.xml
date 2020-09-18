@@ -2,25 +2,19 @@
 <beans xmlns = "http://www.springframework.org/schema/beans"
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-   <bean id="triangle" class="com.raunaqpahwa.Triangle">
-   		<property name="points">
-   			<list>
-   				<ref bean="pointZero" />
-   				<ref bean="pointOne" />
-   				<ref bean="pointTwo" />
-   			</list>
-   		</property> 
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+   default-init-method="myInit" default-destroy-method="myCleanUp">
+   <bean id="triangle" class="com.raunaqpahwa.Triangle" autowire="byName">
    </bean>
-   <bean id="pointZero" class="com.raunaqpahwa.Point">
+   <bean id="pointA" class="com.raunaqpahwa.Point">
    		<property name="x" value="0" />
    		<property name="y" value="0" />
    </bean>
-   <bean id="pointOne" class="com.raunaqpahwa.Point">
+   <bean id="pointB" class="com.raunaqpahwa.Point">
    		<property name="x" value="20" />
    		<property name="y" value="0" />
  	</bean>
- 	<bean id="pointTwo" class="com.raunaqpahwa.Point">
+ 	<bean id="pointC" class="com.raunaqpahwa.Point">
   		<property name="x" value="0" />
    		<property name="y" value="20" />
    	</bean>

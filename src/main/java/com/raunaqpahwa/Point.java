@@ -1,4 +1,5 @@
 package com.raunaqpahwa;
+
 class Point {
 	private int x;
 	private int y;
@@ -13,5 +14,9 @@ class Point {
 	}
 	public void setY(int y) {
 		this.y = y;
+	}
+	@Override
+	public String toString() {
+		return String.format("Point (%d, %d)", x, y);
 	}
 }
