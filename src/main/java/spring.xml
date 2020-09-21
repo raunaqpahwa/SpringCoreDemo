@@ -12,7 +12,12 @@
    			</list>
    		</property> 
    </bean>
+   <bean id="circle" class="com.raunaqpahwa.Circle">
+   	
+   </bean>
+   
    <bean id="pointZero" class="com.raunaqpahwa.Point">
+   		<qualifier value="circleRelated" />
    		<property name="x" value="0" />
    		<property name="y" value="0" />
    </bean>
@@ -25,4 +30,6 @@
    		<property name="y" value="20" />
    	</bean>
    <alias name="triangle" alias="triangle-alias" />
+   	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+   	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
 </beans>
