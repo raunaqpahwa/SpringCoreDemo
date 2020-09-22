@@ -35,5 +35,5 @@ public class School implements InitializingBean, DisposableBean {
 	public void afterPropertiesSet() throws Exception {
 		System.out.format("Inaugral ceremony of %s \n", name);
 	}
-	
+
 }
